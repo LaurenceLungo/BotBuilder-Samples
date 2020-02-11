@@ -1,0 +1,61 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "Image",
+      "url": "https://hk.ulifestyle.com.hk/cms/images/spot/1024/200901/20150126165258_0_20150126160504_3_IMAG1818.jpg",
+      "size": "stretch"
+    },
+    {
+      "type": "TextBlock",
+      "spacing": "medium",
+      "size": "default",
+      "weight": "bolder",
+      "text": "Welcome to 澳洲牛奶公司!",
+      "wrap": true,
+      "maxLines": 0
+    },
+    {
+      "type": "TextBlock",
+      "size": "default",
+      "isSubtle": "true",
+      "text": "I'm SmartServe, your waiter today. How can I help you?",
+      "wrap": true,
+      "maxLines": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Reserve a table",
+      "data": "reserve"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Get a queue ticket",
+      "data": "queue"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Take an order",
+      "data": "order"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Check the bill",
+      "data":  "check"
+    }
+  ],
+  "buttons": [
+    {
+    "type": "messageBack",
+    "title": "My MessageBack button",
+    "displayText": "I clicked this button",
+    "text": "User just clicked the MessageBack button",
+    "value": "{\"property\": \"propertyValue\" }"
+    }
+  ]
+  
+}

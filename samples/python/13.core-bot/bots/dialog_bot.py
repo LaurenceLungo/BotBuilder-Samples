@@ -34,6 +34,7 @@ class DialogBot(ActivityHandler):
         await self.user_state.save_changes(turn_context, False)
 
     async def on_message_activity(self, turn_context: TurnContext):
+        print("\n on message")
         await DialogHelper.run_dialog(
             self.dialog,
             turn_context,

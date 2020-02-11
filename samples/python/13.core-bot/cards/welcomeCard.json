@@ -5,7 +5,7 @@
   "body": [
     {
       "type": "Image",
-      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtB3AwMUeNoq4gUBGe6Ocj8kyh3bXa9ZbV7u1fVKQoyKFHdkqU",
+      "url": "https://hk.ulifestyle.com.hk/cms/images/spot/1024/200901/20150126165258_0_20150126160504_3_IMAG1818.jpg",
       "size": "stretch"
     },
     {
@@ -13,7 +13,7 @@
       "spacing": "medium",
       "size": "default",
       "weight": "bolder",
-      "text": "Welcome to Bot Framework!",
+      "text": "Welcome to 澳洲牛奶公司!",
       "wrap": true,
       "maxLines": 0
     },
@@ -21,26 +21,49 @@
       "type": "TextBlock",
       "size": "default",
       "isSubtle": "true",
-      "text": "Now that you have successfully run your bot, follow the links in this Adaptive Card to expand your knowledge of Bot Framework.",
+      "text": "I'm SmartServe, your waiter today. Here is what I can do ~",
       "wrap": true,
       "maxLines": 0
     }
   ],
   "actions": [
     {
-      "type": "Action.OpenUrl",
-      "title": "Get an overview",
-      "url": "https://docs.microsoft.com/azure/bot-service/?view=azure-bot-service-4.0"
+      "type": "Action.Submit",
+      "title": "Reserve a table",
+      "data": {
+        "action": "reservation"
+      }
     },
     {
-      "type": "Action.OpenUrl",
-      "title": "Ask a question",
-      "url": "https://stackoverflow.com/questions/tagged/botframework"
+      "type": "Action.Submit",
+      "title": "Get a ticket",
+      "data": {
+        "action": "get_ticket"
+      }
     },
     {
-      "type": "Action.OpenUrl",
-      "title": "Learn how to deploy",
-      "url": "https://docs.microsoft.com/azure/bot-service/bot-builder-howto-deploy-azure?view=azure-bot-service-4.0"
+      "type": "Action.Submit",
+      "title": "Order",
+      "data": {
+        "action": "order"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Check",
+      "data": {
+        "action": "check"
+      }
+    }
+  ],
+  "buttons": [
+    {
+    "type": "messageBack",
+    "title": "My MessageBack button",
+    "displayText": "I clicked this button",
+    "text": "User just clicked the MessageBack button",
+    "value": "{\"property\": \"propertyValue\" }"
     }
   ]
+  
 }

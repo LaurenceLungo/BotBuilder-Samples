@@ -54,14 +54,17 @@ async def messages(req: Request) -> Response:
     # Main bot message handler.
     if "application/json" in req.headers["Content-Type"]:
         body = await req.json()
+        print("\n user: ", body)
     else:
         return Response(status=415)
 
     activity = Activity().deserialize(body)
+    print("\n activity: ", activity)
     auth_header = req.headers["Authorization"] if "Authorization" in req.headers else ""
 
     response = await ADAPTER.process_activity(activity, auth_header, BOT.on_turn)
     if response:
+        print("\n response body: ", response.body)
         return json_response(data=response.body, status=response.status)
     return Response(status=201)
 
